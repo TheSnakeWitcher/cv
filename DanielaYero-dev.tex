@@ -1,0 +1,239 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+}
+
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+
+\definecolor{darkblue}{RGB}{0,0,139}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\setlength{\footskip}{5pt}
+\urlstyle{same}
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+\newcommand{\resumeItem}[2]{
+    \item { \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}} }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.5mm]}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+    \newcommand{\cvsection}[1]{
+    \vspace{2mm}
+    \begin{tcolorbox}
+        \textbf{\large #1}
+    \end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\newcommand{\socialicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+\newcommand{\ieeeicon}[1]{\raisebox{-0.3em}{\resizebox{!}{1.3em}{#1}}}
+
+\newcommand{\headerfonti}{\fontfamily{phv}\selectfont}
+\newcommand{\headerfontii}{\fontfamily{ptm}\selectfont}
+\newcommand{\headerfontiii}{\fontfamily{ppl}\selectfont}
+\newcommand{\headerfontiv}{\fontfamily{pbk}\selectfont}
+\newcommand{\headerfontv}{\fontfamily{pag}\selectfont}
+\newcommand{\headerfontvi}{\fontfamily{cmss}\selectfont}
+\newcommand{\headerfontvii}{\fontfamily{qhv}\selectfont}
+\newcommand{\headerfontviii}{\fontfamily{qpl}\selectfont}
+\newcommand{\headerfontix}{\fontfamily{qtm}\selectfont}
+\newcommand{\headerfontx}{\fontfamily{bch}\selectfont}
+
+
+\begin{document}
+\headerfontiii
+
+\begin{center} {\Huge\textbf{Daniela Yero}} \end{center}
+\vspace{-6mm}
+
+\begin{center}
+    \small{
+        \socialicon{\href{mailto:danielitayero@gmail.com}{ \color{black}{\faEnvelope} }}  |
+        \socialicon{ \href{https://github.com/SmilingWitch}{\color{black}{\faGithub}} }  |
+        \socialicon{\href{https://t.me/SmilingWitch}{ \color{black}{\faTelegram} }}  {}
+    }
+\end{center}
+\vspace{-6mm}
+\vspace{-4mm}
+\section{\textbf{Experience}}
+\vspace{-0.4mm}
+
+\resumeSubHeadingListStart
+\resumeSubheading
+    { {\href{https://www.cooltech.quest/}{ \color{black}{CoolTech} }} }{}
+    {Front end developer}{Apr 2024 - Present}
+
+    \resumeItemListStart
+        \item Building a simple company landing page to showcase projects and drive company growth
+
+        \item Design and implementation of a SPA using vite, tailwind and react to interact with a
+          \href{https://vesting.cooltech.quest}{decentralized vesting service}
+    \resumeItemListEnd 
+
+\resumeSubheading
+    { {\href{https://github.com/SearchFuseDev}{ \color{black}{SearchFuse} }} }{}
+    {Front end developer}{Sep 2023 - Apr 2024}
+
+    \resumeItemListStart
+        \item Design and implementation of a complete website for property investements using design patterns like strategy
+
+        \item Creating a personalized card component and style it using pure CSS
+
+        \item Developing a dashboard to show investments stats and using JWT for authorization
+
+        \item Building a cart component styled with bootstrap to make buying easier and increase sells 
+    \resumeItemListEnd 
+
+\resumeSubheading
+    { {\href{https://abaxconsultingfm.com/}{ \color{black}{ABAX Consulting} }} }{}
+    {Web developer}{May 2023 - Aug 2023}
+
+    \resumeItemListStart
+        \item Development of user interfaces (UI) using the FileMaker low-code tool
+
+        \item Construction of a comprehensive framework using the OpenAI API in conjunction with FileMaker to integrate it into a CRM
+    \resumeItemListEnd 
+
+\resumeSubheading
+    { {\href{https://cujae.edu.cu/}{ \color{black}{Technological University of Havana} }} }{}
+    {Assistant Professor of Mathematics}{Mar 2022 - Sep 2023}
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+
+\section{\textbf{Projects}}
+\vspace{0.4mm}
+\resumeItemListStart
+
+    \item Feature complete \href{https://github.com/SmilingWitch/notes_app}{note app} for mobile with react native, following
+      SOLID principles, using REDUX and local storage for data storage
+    \vspace{0.8mm}
+    \item Complete \href{https://github.com/SmilingWitch/new_cactus_ecommerce}{e-commerce} system with login functionality, shopping cart management,
+      bidirectional communication with the backend, and fully responsive design
+    \vspace{0.8mm}
+    \item Modern and responsive \href{https://github.com/SmilingWitch/dex-ui}{user interface} for a decentralized exchange(DEX) with multiple animations
+    \vspace{0.8mm}
+    \item A \href{https://github.com/SmilingWitch/e-commece}{Web UI} with React and \href{https://github.com/SmilingWitch/zona0_native}{mobile UI} with React Native for a fully functional wallet that shows
+      transaction history, balance, exchange operations, etc
+    \vspace{0.8mm}
+    \item Simple \href{https://github.com/SmilingWitch/minecraft_clone}{minecraft clone} threejs to create and display animated 3D computer graphics
+    \vspace{0.8mm}
+    \item Basic \href{https://github.com/SmilingWitch/ExchangeRateCalculator}{exchange rate calculator } with typescript, css,
+      nextjs and vercel(for deployment)
+    \vspace{0.8mm}
+\resumeItemListEnd
+
+
+\section{\textbf{Skills}}
+\vspace{-0.4mm}
+\resumeHeadingSkillStart
+    \resumeSubItem{Programming Languages:}
+        { html, css, javascript, typescript }
+    \resumeSubItem{Tools \& Technologies:}
+        { git, github, react, react native, redux, vite, vercel, next }
+\resumeHeadingSkillEnd
+
+
+\section{\textbf{Education}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Technological University Of Havana Jose Antonio Echeverria}{Havana, Cuba}
+{BSE Biomedical engineering}{2017 - 2022}
+
+\resumeSubheading
+{Technological University Of Havana Jose Antonio Echeverria}{Havana, Cuba}
+{Postgraduate in Discrete Mathmatics}{2022}
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\end{document}
