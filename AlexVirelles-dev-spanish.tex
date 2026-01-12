@@ -1,0 +1,224 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+}
+
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+
+\definecolor{darkblue}{RGB}{0,0,139}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\setlength{\footskip}{5pt}
+\urlstyle{same}
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+\newcommand{\resumeItem}[2]{
+    \item { \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}} }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.5mm]}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+    \newcommand{\cvsection}[1]{
+    \vspace{2mm}
+    \begin{tcolorbox}
+        \textbf{\large #1}
+    \end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\newcommand{\socialicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+\newcommand{\ieeeicon}[1]{\raisebox{-0.3em}{\resizebox{!}{1.3em}{#1}}}
+
+\newcommand{\headerfonti}{\fontfamily{phv}\selectfont}
+\newcommand{\headerfontii}{\fontfamily{ptm}\selectfont}
+\newcommand{\headerfontiii}{\fontfamily{ppl}\selectfont}
+\newcommand{\headerfontiv}{\fontfamily{pbk}\selectfont}
+\newcommand{\headerfontv}{\fontfamily{pag}\selectfont}
+\newcommand{\headerfontvi}{\fontfamily{cmss}\selectfont}
+\newcommand{\headerfontvii}{\fontfamily{qhv}\selectfont}
+\newcommand{\headerfontviii}{\fontfamily{qpl}\selectfont}
+\newcommand{\headerfontix}{\fontfamily{qtm}\selectfont}
+\newcommand{\headerfontx}{\fontfamily{bch}\selectfont}
+
+
+\begin{document}
+\headerfontiii
+
+\begin{center} {\Huge\textbf{Alejandro Virelles}} \end{center}
+\vspace{-6mm}
+
+\begin{center}
+    \small{
+        \socialicon{ \href{mailto:thesnakewitcher@gmail.com}{\color{black}{\faEnvelope}} }
+        \socialicon{ \href{https://github.com/TheSnakeWitcher}{\color{black}{\faGithub}} }
+        \socialicon{ \href{https://t.me/TheSnakeWitcher}{\color{black}{\faTelegram}} } {}
+    }
+\end{center}
+\vspace{-6mm}
+
+\vspace{-0.4mm}
+\section{\textbf{Skills}}
+\vspace{-0.4mm}
+\resumeHeadingSkillStart
+    \resumeSubItem{Lenguajes de programación:}
+        { solidity, rust, go, typescript, python, sql, bash, lua }
+    \resumeSubItem{Bases de Datos}
+        { postgres, sqlite, mongodb, redis }
+    \resumeSubItem{Herramientas \& Tecnologias:}
+        { linux, git, github, docker, aws, grpc }
+    \resumeSubItem{Lenguajes:}
+        { español, inglés }
+\resumeHeadingSkillEnd
+
+\section{\textbf{Experiencia}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumeSubheading
+    { {\href{https://portal.fusy.app}{\color{black}{Fusyona}} }}{}
+    {Mid Senior Blockchain developer}{Jun 2024 - April 2025}
+
+    \resumeItemListStart
+        \item Desarrollo de contractos inteligentes con solidity siguiendo las metodologias TDD y scrum y usando
+          hardhat como framework con mocha, chai, hardhat-chai-matchers, etc 
+
+        \item Entrenando juniors para que rapidamente se vuelvan productivos, conscientes de la seguridad, sigan mejores practicas
+          y desarrollen confianza para contribuir al proyecto
+
+        \item Construyendo una \href{https://github.com/Fusyona/web3-core}{libreria} de typescript para hacer facil la creacion SDKs que se proveen al front-end para interactuar
+          con contractos inteligentes
+
+        \item Configurando un flujo de trabajo CI con github actions que detecta vulnerabilidades al crear PRs
+          usando slither y corre la test suite para verificar la integridad de los cambios antes de hacer merge
+
+        \item Construyendo factorias de tokens ERC20 para una platforma launchpad,
+          y tambien factorias de ERC721(son soporte para royalties o ERC2981) y ERC1155 para
+          interactuar con un marketplace on-chain 
+    \resumeItemListEnd 
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+
+\section{\textbf{Projectos}}
+\vspace{0.4mm}
+\resumeItemListStart
+    \vspace{0.8mm}
+    \item Una \href{https://vesting.cooltech.quest}{Plataforma de vesting} para tokens erc20 con distribucion automatica que integra
+      blockchain y la creacion dinamica de recursos en aws 
+
+    \item Construyendo un \href{https://github.com/TheSnakeWitcher/AuctionHub-server}{servidor simple} en golang el cual usa el framework web echo para
+      realizar operaciones CRUD usando REST API para interactuar con un servicio de subastas 
+
+    \item Un \href{https://github.com/TheSnakeWitcher/arbitrageur-bot}{buscador} escrito en rust usando la libraria ethers-rs que observa la
+      diferencia en precio de un par de tokens ERC20 y analiza estos datos para encontrar oportunidades de
+      trades entre uniswap-v3 y quickswap-v3
+
+    \item Creando un \href{https://github.com/TheSnakeWitcher/mypeople-go}{addressbook} con CLI(usando cobra), viper(para configuracion) y sqlite como base de datos(usando sqlc)
+
+    \item Simple \href{https://github.com/TheSnakeWitcher/arbitrageur-contract}{contracto de arbitraje} escrito en solidity usando la libreria Openzeppelin-v4 
+      que solicita flashloans usando el protocolo AAVE y ejecuta trades(o swaps) entre uniswap-v3 y quickswap-v3
+
+    \item Un \href{https://github.com/TheSnakeWitcher/mypeople}{addressbook} para manejar contactos escrito en rust usando clap para la CLI y sqlite como base de datos
+
+    \item \href{https://github.com/TheSnakeWitcher/hardhat-inspect.git}{Plugin para el framework hardhat} usando typescript para de forma conveniente acceder
+      a ciertos datos de un proyecto hardhat y hacer el proceso de desarrollo mas facil y fluido
+\resumeItemListEnd
+
+
+\section{\textbf{Educacion}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Universidad Tecnologica de La Habana Jose Antonio Echeverria}{Habana, Cuba}
+{Ingenieria Automatica}{2017 - 2022}
+\resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\end{document}
