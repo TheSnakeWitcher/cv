@@ -153,7 +153,7 @@
     \resumeSubItem{Database Systems:}
         { postgres, sqlite, mongodb, redis }
     \resumeSubItem{Tools \& Technologies:}
-        { linux, git, github, docker, aws, grpc }
+        { linux, git, github, docker, aws, grpc, ai }
     \resumeSubItem{Languages:}
         { spanish, english }
 \resumeHeadingSkillEnd
@@ -161,9 +161,27 @@
 \section{\textbf{Experience}}
 \vspace{-0.4mm}
 \resumeSubHeadingListStart
+
+\resumeSubheading
+    { {\href{https://www.cooltech.quest}{\color{black}{Cooltech}} }}{}
+    {Blockchain developer}{Jul 2025 - Feb 2026}
+
+    \resumeItemListStart
+        \item Building \href{https://vesting.cooltech.quest}{cooltech arranger}, a decentralized vesting platform for erc20 tokens with
+          protocol faucet and automatic distribution which integrates blockchain and the dynamic
+          creation of aws resources(aws api gateway, lambda, event bridge, dynamodb)
+
+        \item Building a \href{https://dp2p.cooltech.quest}{decentralized p2p} using foundry framework for smart contracts, viem for blockchain
+          interaction and sveltekit for the UI(deployed with vercel, also experienced with aws cloudfront)
+
+        \item Developing REST APIs and backend services with python(fastapi),rust(actix), go and
+          protocol buffers for inter-services comunications via rpc(I also have experience with
+          typescript bun,node,hono)
+    \resumeItemListEnd 
+
 \resumeSubheading
     { {\href{https://portal.fusy.app}{\color{black}{Fusyona}} }}{}
-    {Mid Blockchain developer}{Jun 2024 - April 2025}
+    {Mid-Senior Blockchain developer}{Jun 2024 - April 2025}
 
     \resumeItemListStart
         \item Developing smart contracts with solidity by following TDD and scrum methodology for
@@ -181,9 +199,9 @@
           ERC20 token with support for payable token(ERC1363) that use LayerZero-v1 as
           interoperability protocol
 
-        \item Building a typescript \href{https://github.com/Fusyona/web3-core}{library} that makes easier to create SDKs to interact with smart contracts for
-          the front end and additionally contains predefined mint schemes for collections whose tokens need
-          and ID(like ERC721 and ERC1155)
+        \item Building a typescript \href{https://github.com/Fusyona/web3-core}{library} that makes easier to create SDKs to interact with
+          smart contracts for the front end and additionally contains some utilities to
+          decrease development time
 
         \item Refactoring a launchpad to make the contract deployable(to meet spurious dragon contract size limit),
           more maintainable and gas efficient by using minimal proxy(EIP 1167), custom errors and reducing the
@@ -196,9 +214,6 @@
           access restriction, emergency stop or pausable contracts), proxies(transparent, UUPS, beacon)
           and upgradeability(diamond)
 
-        \item Building a standalone or self-contained vesting management contract that can manage efficiently
-          the life cycle of complex graded vesting plans of ERC20 tokens
-
         \item Setting up a basic CI pipeline using github actions that detects vulnerabilities on PRs
           creation using slither and runs test suite on PR merge
     \resumeItemListEnd 
@@ -210,29 +225,18 @@
 \vspace{0.4mm}
 \resumeItemListStart
     \vspace{0.8mm}
-    \item A \href{https://vesting.cooltech.quest}{Vesting platform} for erc20 tokens with automatic distribution which integrates
-      blockchain and the dynamic creation of aws resources
-
     \item \href{https://github.com/TheSnakeWitcher/contracts-fees}{Solidity library} for fee management in web3 protocols using the foundry framework
-
-    \item Building a \href{https://github.com/TheSnakeWitcher/AuctionHub-server}{simple server} in golang which uses echo web framework to make
-      CRUD operations using a REST API to interact with an auction service
 
     \item Basic \href{https://github.com/TheSnakeWitcher/arbitrageur-bot}{searcher} written in rust using ethers-rs library that watch price
       differences of a set of ERC20 tokens and analyze this data to find trade
       opportunities between uniswap-v3 and quickswap-v3
 
-    \item Creating an \href{https://github.com/TheSnakeWitcher/mypeople-go}{addressbook} with a CLI interface(using cobra), viper(for configuration)
-      and sqlite as database(using sqlc)
-
     \item Simple \href{https://github.com/TheSnakeWitcher/arbitrageur-contract}{arbitrage contract} written in solidity using Openzeppelin-v4 library
       that request flashloans using AAVE protocol and execute trades(or swaps)
       between uniswap-v3 and quickswap-v3
 
-    \item Basic cli \href{https://github.com/TheSnakeWitcher/mypeople}{addressbook} to manage contacts written in rust using clap and sqlite
-
-    \item \href{https://github.com/TheSnakeWitcher/hardhat-inspect.git}{Hardhat plugin} using typescript for conveniently access data of a hardhat project and
-      to make the development process easier and more fluent by
+    \item \href{https://github.com/TheSnakeWitcher/hardhat-inspect.git}{Hardhat plugin} using typescript for conveniently access data of a hardhat
+      project and to make the development process easier and more fluent
 \resumeItemListEnd
 
 
