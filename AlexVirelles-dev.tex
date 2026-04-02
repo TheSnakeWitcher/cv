@@ -161,6 +161,24 @@
 \section{\textbf{Experience}}
 \vspace{-0.4mm}
 \resumeSubHeadingListStart
+
+\resumeSubheading
+    { {\href{https://portal.fusy.app}{\color{black}{Cooltech}} }}{}
+    {Software Developer}{Jul 2025 - Feb 2026}
+
+    \resumeItemListStart
+        \item Building a \href{https://vesting.cooltech.quest}{cooltech arranger}, a decentralized vesting platform for erc20 tokens with
+          automatic distribution which integrates blockchain and the dynamic creation of aws resources
+          like aws api gateway, lambda and event bridge
+
+        \item Building a \href{https://dp2p.cooltech.quest}{decentralized p2p} using sveltekit for the UI, deployment using
+          vercel(also experienced with aws cloudfront)
+
+        \item Developing REST APIs and backend services with python mainly using fastapi web framework 
+          and protocol buffers for inter-services comunications via rpc(I also have experience with
+          typescript bun,node,hono)
+    \resumeItemListEnd 
+
 \resumeSubheading
     { {\href{https://portal.fusy.app}{\color{black}{Fusyona}} }}{}
     {Mid Senior Blockchain developer}{Jun 2024 - April 2025}
@@ -172,10 +190,6 @@
         \item Mentoring juniors so they became quickly productive, security aware, follow best practices
           and develop confidence to contribute to the project
 
-        \item Building ownable and pausable factories of ERC20 tokens for a launchpad platform,
-          also factories of ERC721(with royalties or ERC2981 support) and ERC1155 for
-          interaction with a marketplace 
-
         \item Developing a crosschain ERC721 collection as early access key for the fusyfox
           game using chainlink CCIP as interoperability protocol and crafting a crosschain
           ERC20 token with support for payable token(ERC1363) that use LayerZero-v1 as
@@ -185,19 +199,9 @@
           the front end and additionally contains predefined mint schemes for collections whose tokens need
           and ID(like ERC721 and ERC1155)
 
-        \item Refactoring a launchpad to make the contract deployable(to meet spurious dragon contract size limit),
-          more maintainable and gas efficient by using minimal proxy(EIP 1167), custom errors and reducing the
-          on-chain data stored in the contract by taking advantage of events
-
-        \item Adjusting a existing launchpad contract so it works as a liquidity bootstrapping pool
-          or smart pool with a simple linear curve using ABDKMath library
-
         \item Experience with solidity patterns for security(check-effects-interaction, pull over push,
           access restriction, emergency stop or pausable contracts), proxies(transparent, UUPS, beacon)
           and upgradeability(diamond)
-
-        \item Building a standalone or self-contained vesting management contract that can manage efficiently
-          the life cycle of complex graded vesting plans of ERC20 tokens
 
         \item Setting up a basic CI pipeline using github actions that detects vulnerabilities on PRs
           creation using slither and runs test suite on PR merge
@@ -210,9 +214,6 @@
 \vspace{0.4mm}
 \resumeItemListStart
     \vspace{0.8mm}
-    \item A \href{https://vesting.cooltech.quest}{Vesting platform} for erc20 tokens with automatic distribution which integrates
-      blockchain and the dynamic creation of aws resources
-
     \item Building a \href{https://github.com/TheSnakeWitcher/AuctionHub-server}{simple server} in golang which uses echo web framework to make
       CRUD operations using a REST API to interact with an auction service
 
